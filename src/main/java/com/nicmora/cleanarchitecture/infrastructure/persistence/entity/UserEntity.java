@@ -27,7 +27,7 @@ public class UserEntity implements Serializable {
     @Column(name = "last_name")
     private String lastName;
     private String email;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<ProductEntity> products;
 
 }
